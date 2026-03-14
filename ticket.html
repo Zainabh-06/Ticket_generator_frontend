@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Ticket</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<h1 class="title">FutureTech Summit</h1>
+<p class="subtitle">YOUR TICKET</p>
+
+<div class="ticket-page">
+
+<div class="ticket">
+
+<h3>FutureTech Summit</h3>
+<p>NOV 15-17 · DIGITAL CRAFT CONFERENCE</p>
+
+<div class="ticket-info">
+
+<img id="ticketAvatar" class="avatar">
+
+<div>
+<p id="ticketName"></p>
+<p id="ticketEmail"></p>
+<p id="ticketGithub"></p>
+</div>
+
+</div>
+
+<div class="ticket-footer">
+GENERAL ADMISSION
+<span id="ticketId"></span>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const data = JSON.parse(localStorage.getItem("ticketData"));
+
+document.getElementById("ticketName").innerText = data.name;
+document.getElementById("ticketEmail").innerText = data.email;
+document.getElementById("ticketGithub").innerText = "@" + data.github;
+document.getElementById("ticketAvatar").src = data.avatar;
+document.getElementById("ticketId").innerText = "#" + data.id;
+
+
+/* CONFETTI EFFECT */
+
+function launchConfetti(){
+
+confetti({
+particleCount:150,
+spread:120,
+origin:{ y:0.6 }
+});
+
+}
+
+launchConfetti();
+
+</script>
+
+</body>
+</html>

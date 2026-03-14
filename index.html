@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conference Ticket Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">FutureTech Summit</h1>
+<p class="subtitle">YOUR TICKET AWAITS</p>
+
+<div class="container">
+
+<div class="form-section">
+
+<h2>Generate Your Ticket</h2>
+<p>Fill in your details to receive your personal conference pass.</p>
+
+<form id="ticketForm">
+
+<label>Full Name</label>
+<input type="text" id="name" required>
+
+<label>Email Address</label>
+<input type="email" id="email" required>
+<small>We'll use this for your ticket confirmation</small>
+
+<label>GitHub Username</label>
+<input type="text" id="github" required>
+
+<label>Upload Avatar</label>
+<input type="file" id="avatar" accept=".png,.jpg,.jpeg,.webp" required>
+<small>JPG, PNG or WebP under 500KB</small>
+
+<p class="error" id="error"></p>
+
+<button type="submit">GENERATE TICKET</button>
+
+</form>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
