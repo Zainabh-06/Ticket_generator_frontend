@@ -1,4 +1,5 @@
 Conference Ticket Generator 🎟️
+
 A simple and responsive web application to generate personalized conference tickets.
 
 🚀 Features
